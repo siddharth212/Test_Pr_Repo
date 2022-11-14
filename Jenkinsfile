@@ -7,8 +7,8 @@ pipeline {
       [key: 'PR_STATE', value: '$.pullrequest.state', defaultValue: 'null']
      ],
      causeString: 'Triggered By Bitbucket',
-     token: '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',
-     tokenCredentialId: '',
+     token: '',
+     tokenCredentialId: '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',
      printContributedVariables: true,
      printPostContent: true,
      silentResponse: false
