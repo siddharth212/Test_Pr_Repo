@@ -10,13 +10,4 @@ pipeline {
             
             }
         }
-        
-        stage('ProcessWebHook') {
-      steps {
-          script {
-            echo "Received a Webhook Request from github."
-            echo "Triggering the  Pipeline"
-          }
-      }
-    }
 }
