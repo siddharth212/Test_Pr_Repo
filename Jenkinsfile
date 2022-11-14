@@ -7,8 +7,8 @@ pipeline {
       [key: 'PR_STATE', value: '$.pullrequest.state', defaultValue: 'null']
      ],
      causeString: 'Triggered By Bitbucket',
-     token: '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',
-     tokenCredentialId: '',
+     token: '',
+     tokenCredentialId: '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',
      printContributedVariables: true,
      printPostContent: true,
      silentResponse: false
@@ -27,9 +27,7 @@ pipeline {
       steps {
           script {
             echo "Received a Webhook Request from github."
-            // Always we will call the Multibranch pipeline
-            echo "Triggering the Multibranch Pipeline"
-            build job: "MultiYCRPipeline", wait: false
+            echo "Triggering the  Pipeline"
           }
       }
     }
