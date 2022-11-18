@@ -4,9 +4,24 @@ pipeline {
   
 
     stages {
-        stage('Hello') {
+        stage('ch1') {
             steps {
-                echo 'Hello World'
+                agent{
+                label 'DemoNode'
+                }
+                echo 'i am in node 1'
+               
+            
+            }
+        }
+        
+        
+        stage('ch2') {
+            steps {
+                agent{
+                label 'DemoNode2'
+                }
+                echo 'i am in node 2'
                
             
             }
